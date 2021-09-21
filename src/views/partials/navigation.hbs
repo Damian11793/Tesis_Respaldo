@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+   
+    <a class="navbar-brand" href="/">Seminarios 2021-2022</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Acciones de usuario
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/links">Datos del usuario</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/links/add">Agregar información</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Cerrar sesion</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a href="/signin" class="nav-link">Iniciar Sesion</a>
+        </li>
+        <li class="nav-item">
+          <a href="/signup" class="nav-link">Registro</a>
+        </li>
+
+         {{/if}}
+      </ul>
+    </div>
+  
+</div>
+</nav>
